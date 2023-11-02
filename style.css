@@ -10,31 +10,34 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     /* This ensures that padding and borders of elements don't make them bigger than you expect.
     It keeps sizing consistent and predictable. */
     box-sizing: border-box;
 }
 
 .hero{
-    width: 100%;
+    /* width: 100vh; */
     /* To be 100% of the viewport height (vh).
     The viewport height is the visible height of the browser window.
     So, even if there's only a little content inside,
     the .hero section will be at least as tall as the screen. */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: var(--primary-color);
     color: var(--font-color);
 }
 
 nav{
     background: var(--primary-color);
-    width: 100%;
-    padding: 10px 10%; /* top,bottom = 10 px , left,right = 10%*/
+    padding: 10px 5%; /* top,bottom = 10 px , left,right = 10%*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative; /* This is to make sure the absolute-toy uses this as its reference */
+    top: 0;
+    z-index: 1000;  /* To ensure the nav stays on top of other elements */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Horizontal offset, Vertical offset, Blur radius, Color */
+    /* The shadow color here is a black color with 10% opacity */
+    position: relative; /*This is to make sure the absolute-toy uses this as its reference */
 }
 
 nav url{
@@ -124,7 +127,7 @@ nav ul li a:hover{
 .sub-menu-wrap{
     position: absolute;
     top: 100%;
-    right: 10%;
+    right: 5%;
     width: 320px;
     max-height: 0px; /*sub-menu is hidden*/
     overflow: hidden;
@@ -198,4 +201,107 @@ nav ul li a:hover{
 
 .sub-menu-link:hover span img{
     transform: translateX(3px);
+}
+
+.hero-banner{
+    /* width: 100vh; */
+    height: 91vh;
+    background: url(assets/homepage-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;}
+
+
+.hero-banner-elements{
+    margin-top: 5%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner h1{
+    font-size: 5em;
+    line-height: 90px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: right;
+}
+
+.hero-banner p{
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-bottom: 60px;
+    text-align: right;
+}
+
+.hero-banner-btn-register{
+    background-color: var(--font-color);
+    color: white;
+    border: 1px solid var(--font-color);
+    border-radius: 30px;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    margin-left: 65%;
+}
+
+.hero-banner-btn-register:hover{
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+.chat-button-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat-button-container:hover .chat-button{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.chat-button-container:hover .chat-icon-container{
+    background-color: var(--secondary-color);
+}
+
+.chat-button{
+    background-color: white;
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    margin-left: 50%;
+    cursor: pointer;
+    font-size: 1.3em;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+
+.chat-icon-container {
+    position: absolute;
+    right: 0px; /* Adjust as needed to position the circle over the edge */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--font-color);
+    border-radius: 50%;
+    width: 65px; /* Adjust size if needed */
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+
+
+.chat-icon {
+    width: 35px; /* Adjust icon size if needed */
 }

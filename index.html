@@ -7,53 +7,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
-        <nav>
-            <img src="assets/logo-remofind.png" alt="Urban Mugist" class="logo">
-            <form class="search-container">
-                <input type="text" id="search-bar" placeholder="Search...">
-                <a href="#"><img class="search-icon" src="assets/search.png"></a>
-            </form>
-            <ul>
-                <li><a href="#">News/Article</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <img src="assets/profile-phathaphon.png" alt="Phathaphon S." class="user-pic" onclick="toggleMenu()">
-
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="assets/profile-phathaphon.png" alt="Phathaphon Sawettaboot">
-                        <h3>Phathaphon Sawettaboot</h3>
+    <header>
+        <div class="hero">
+            <nav>
+                <img src="assets/logo-remofind.png" alt="Urban Mugist" class="logo">
+                <form class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search...">
+                    <a href="#"><img class="search-icon" src="assets/search.png"></a>
+                </form>
+                <ul>
+                    <li><a href="#">News/Article</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <img src="assets/profile-phathaphon.png" alt="Phathaphon S." class="user-pic" onclick="toggleMenu()">
+    
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="assets/profile-phathaphon.png" alt="Phathaphon Sawettaboot">
+                            <h3>Phathaphon Sawettaboot</h3>
+                        </div>
+                        <hr>
+    
+                        <a href="#" class="sub-menu-link">
+                            <img src="assets/user.png" alt="Edit Profile">
+                            <p>Edit Profile</p>
+                            <span><img src="assets/right-arrow.png" alt="arrow"></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="assets/settings.png" alt="Settings & Privacy">
+                            <p>Settings & Privacy</p>
+                            <span><img src="assets/right-arrow.png" alt="arrow"></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="assets/help.png" alt="Help & Support">
+                            <p>Help & Support</p>
+                            <span><img src="assets/right-arrow.png" alt="arrow"></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="assets/logout.png" alt="Logout">
+                            <p>Logout</p>
+                            <span><img src="assets/right-arrow.png" alt="arrow"></span>
+                        </a>
                     </div>
-                    <hr>
-
-                    <a href="#" class="sub-menu-link">
-                        <img src="assets/user.png" alt="Edit Profile">
-                        <p>Edit Profile</p>
-                        <span><img src="assets/right-arrow.png" alt="arrow"></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="assets/settings.png" alt="Settings & Privacy">
-                        <p>Settings & Privacy</p>
-                        <span><img src="assets/right-arrow.png" alt="arrow"></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="assets/help.png" alt="Help & Support">
-                        <p>Help & Support</p>
-                        <span><img src="assets/right-arrow.png" alt="arrow"></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                        <img src="assets/logout.png" alt="Logout">
-                        <p>Logout</p>
-                        <span><img src="assets/right-arrow.png" alt="arrow"></span>
-                    </a>
                 </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero-banner">
+            <div class="hero-banner-elements">
+                <h1>Join our platform<br>today and find your<br>ideal remote job.</h1>
+                <p>Work Anywhere, Thrive Everywhere!<br>
+                    From job vacancies and remote work tips to skill<br>
+                    development opportunities, we empower you to<br>
+                    thrive in the remote work environment.</p>
+                <button class="hero-banner-btn-register">REGISTER NOW</button>
+                <div class="chat-button-container">
+                    <button class="chat-button">Chat us for any question</button>
+                    <div class="chat-icon-container">
+                        <img src="assets/message-icon.png" alt="Chat Icon" class="chat-icon">
+                    </div>
+                </div>  
             </div>
-        </nav>
-    </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 
     <script src="script.js"></script>
 </body>

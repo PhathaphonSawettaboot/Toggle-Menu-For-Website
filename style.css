@@ -1,0 +1,193 @@
+:root{
+    --primary-color: #FFD935;
+    --secondary-color: #008ABF;
+    --accent-color: #DB4870;
+    --grey-color:#807979;
+    --font-color: #37382D;
+ 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* This ensures that padding and borders of elements don't make them bigger than you expect.
+    It keeps sizing consistent and predictable. */
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;
+    /* To be 100% of the viewport height (vh).
+    The viewport height is the visible height of the browser window.
+    So, even if there's only a little content inside,
+    the .hero section will be at least as tall as the screen. */
+    min-height: 100vh;
+    background: var(--primary-color);
+    color: var(--font-color);
+}
+
+nav{
+    background: var(--primary-color);
+    width: 100%;
+    padding: 10px 10%; /* top,bottom = 10 px , left,right = 10%*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* This is to make sure the absolute-toy uses this as its reference */
+}
+
+nav url{
+    width: 100%;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none; /*Removes the default bullet points*/
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
+}
+
+.logo{
+    width: 260px;
+}
+
+.search-container{
+    width: 30%;
+    height: 40px;
+    align-items: center;
+    /* margin: 0 auto; */
+  }
+  
+  input#search-bar{
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-style: italic;
+    border: 1px solid var(--grey-color);
+    border-radius: 25px;
+    outline: none;
+    &:focus{
+      border: 1px solid var(--secondary-color);
+      border-radius: 25px;
+      transition: 0.35s ease;
+      color: var(--secondary-color);
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+       opacity: 0;
+       }    
+     }
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 25px;
+    height: 25px;
+    top: -36px;
+    right: 15px;
+  }
+
+  .search-icon:hover{
+    content: url(assets/search-hover.png);
+  }
+  
+
+.user-pic{
+    width: 60px;
+    border: 4px solid var(--secondary-color);
+    border-radius: 50%; 
+    cursor: pointer;
+    margin-left: 30px;
+ }
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+}
+
+.sub-menu{
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--secondary-color);
+    margin: 15px 0 10px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3{
+    font-weight: 500;
+}
+
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-color);
+    margin: 12px 0;
+}
+
+.sub-menu-link img{
+    width: 20px;
+    margin-right: 15px;
+    background: #e5e5e5;
+    border: 2px solid transparent;  /* 2px spacing between the element and the outline */
+    outline: 2px solid #e5e5e5;
+    border-radius: 50%;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+.sub-menu-link span img{
+    width: 15px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span img{
+    transform: translateX(3px);
+}
